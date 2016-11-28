@@ -1,0 +1,48 @@
+<!-- fixed header -->
+<div class='header-wrapper'>
+    <span class='logo cell hidden-xs' ng-click='$state.isNavOn = !$state.isNavOn'><img src='img/logo.png' /></span>
+
+    <span class='visible-xs-inline pull-left cell'
+        ng-hide='$state.isNavOn'
+        ng-click='$state.isNavOn = !$state.isNavOn'>
+        <i class='fa fa-bars fa-lg'></i>
+    </span>
+
+    <span class='visible-xs-inline pull-left cell'
+        ng-show='$state.isNavOn'
+        ng-click='$state.isNavOn = !$state.isNavOn'>
+        <i class='fa fa-long-arrow-left fa-lg'></i>
+    </span>
+
+    <!-- user menu dropdown -->
+    <div class="dropdown pull-right cell user-menu-cell">
+        <button class="btn dropdown-toggle" type="button"
+            ng-blur='mainController.onUserMenuBlur($event)'
+            ng-click='mainController.isUserMenuOn = !mainController.isUserMenuOn'>
+            <span ng-bind='mainController.username'></span>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right" ng-class='{on: mainController.isUserMenuOn}'>
+            <li>
+                <a ui-sref='main' class='user-menu-anchor'
+                    ng-click='$state.alert("Hello!"); mainController.isUserMenuOn = false'>Home</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- responsive left nav -->
+<div class='nav-wrapper' ng-class='{off: !$state.isNavOn}'>
+    <p class='item' ng-repeat='item in mainController.navItems' ng-class='{on: $state.current.name == item.stateName}'>
+        <a ui-sref='{{item.stateName}}' ng-bind='$state.get(item.stateName).label'></a>
+    </p>
+</div>
+
+<div class='content-mask' ng-class='{on: $state.isNavOn}'></div>
+
+<!-- page content -->
+<div class='content-wrapper' ng-class='{"nav-on": $state.isNavOn}'>
+    <h2 ng-bind='$state.current.label'></h2>
+    <div class='content-ui-view' ui-view>Hello!</div>
+</div>
