@@ -4,7 +4,7 @@ Simple SPA(single page application) using [angular.js 1.x](https://angularjs.org
 ### Folder structure
 ```sh
 .
-├── dist            # root path of dev server
+├── docs            # root path of dev server
 │   ├── css
 │   ├── img
 │   ├── view
@@ -20,6 +20,7 @@ Simple SPA(single page application) using [angular.js 1.x](https://angularjs.org
 ```
 
 ### Features
+- Pure front-end code
 - [angular-ui-router](https://github.com/angular-ui/ui-router)
 - Responsive(mobile devices ready)
 - babel-loader, i.e. ES6 syntax ready.

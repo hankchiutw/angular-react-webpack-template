@@ -62,4 +62,3 @@ modules/
 # env setup
 data/db/*
 test/test.html
-dist/bundle.js
