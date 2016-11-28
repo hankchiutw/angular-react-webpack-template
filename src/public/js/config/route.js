@@ -11,7 +11,6 @@ define([
     .config(['$stateProvider', function($stateProvider) {
         $stateProvider
             .state('main', {
-                url: '/',
                 label: 'Home',
                 templateUrl: './view/template/mainpage-wrapper.html',
                 controller: 'mainController as mainController'

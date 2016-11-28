@@ -1,12 +1,12 @@
 {
   "name": "angular-webpack-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "angular SPA using webpack",
   "main": "src/public/js/main.js",
   "config": {
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --color --content-base dist/ --open --inline",
+    "start": "webpack-dev-server --progress --color --content-base docs/ --open --inline",
     "build": "webpack --progress --color",
     "build:detail": "webpack --display-error-details --display-reasons --display-modules"
   },
