@@ -1,27 +1,11 @@
 "use strict";
 
-define([
-    "angular",
-    "js/app"
-], function(angular, app) {
-
-    /**
-     * Main controller which defined variables and functionalities available for all child controllers
-     * @class mainController
-     */
-    app.controller("mainController", controller);
-
-    controller.$inject = ['$state', '$timeout'];
-
-    return controller;
-
-    ////////
-    function controller($state, $timeout) {
-        var self = this;
+export default class mainController{
+    constructor($state, $timeout){
+        const self = this;
 
         self.username = 'Demo';
         self.isUserMenuOn = false;
-        self.onUserMenuBlur = onUserMenuBlur;
         self.navItems = [
             {stateName: 'main.page1'},
             {stateName: 'main.page2'}
@@ -33,25 +17,11 @@ define([
         $state.message = '';
         $state.alert = _alert;
 
-        init();
+        // default hide nav for mobile devices
+        if(window.matchMedia('(max-width: 767px)').matches) $state.isNavOn = false;
 
-        ////////
-        function init(){
-            // default hide nav for mobile devices
-            if(window.matchMedia('(max-width: 767px)').matches) $state.isNavOn = false;
-
-            // go to default child view here
-            $state.go('main.page1');
-        }
-
-        /**
-         * For better UX. Hide dropdown user menu.
-         */
-        function onUserMenuBlur(e){
-            if(!e.relatedTarget ||
-                !e.relatedTarget.classList.contains('user-menu-anchor'))
-                self.isUserMenuOn = false;
-        }
+        // go to default child view here
+        $state.go('main.page1');
 
         /**
          * In page alert
@@ -76,8 +46,16 @@ define([
             }, stayPeriod);
             return false;
         };
-
     }
 
+    /**
+     * For better UX. Hide dropdown user menu.
+     */
+    onUserMenuBlur(e){
+        if(!e.relatedTarget ||
+            !e.relatedTarget.classList.contains('user-menu-anchor'))
+            self.isUserMenuOn = false;
+    }
+}
 
-});
+mainController.$inject = ['$state', '$timeout'];

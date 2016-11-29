@@ -1,32 +1,7 @@
 "use strict";
 
-define([
-    "angular",
-    "js/app"
-], function(angular, app) {
+export default class page2Controller{
 
-    /**
-     * 
-     * @class page2Controller
-     */
-    app.controller("page2Controller", controller);
+}
 
-    controller.$inject = [];
-
-    return controller;
-
-    ////////
-    function controller() {
-        var self = this;
-
-        init();
-
-        ////////
-        function init(){
-
-        }
-
-    }
-
-
-});
+page2Controller.$inject = [];
