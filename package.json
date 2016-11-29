@@ -3,8 +3,7 @@
   "version": "1.0.1",
   "description": "angular SPA using webpack",
   "main": "src/public/js/main.js",
-  "config": {
-  },
+  "config": {},
   "scripts": {
     "start": "webpack-dev-server --progress --color --content-base docs/ --open --inline",
     "build": "webpack --progress --color",
@@ -19,7 +18,11 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-local-storage": "^0.5.0",
-    "angular-ui-router": "^0.3.2"
+    "angular-ui-router": "^0.3.2",
+    "babel-preset-react": "^6.16.0",
+    "ngreact": "^0.3.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",

@@ -20,9 +20,6 @@ export default class mainController{
         // default hide nav for mobile devices
         if(window.matchMedia('(max-width: 767px)').matches) $state.isNavOn = false;
 
-        // go to default child view here
-        $state.go('main.page1');
-
         /**
          * In page alert
          * @params {string} msg
