@@ -1,7 +1,7 @@
 {
   "name": "angular-webpack-demo",
-  "version": "1.0.1",
-  "description": "angular SPA using webpack",
+  "version": "1.1.0",
+  "description": "Simple SPA using angular.js, webpack and react",
   "main": "src/public/js/main.js",
   "config": {},
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "keywords": [
     "angular",
+    "react",
     "webpack"
   ],
   "author": "Hank",
