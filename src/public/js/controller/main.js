@@ -1,5 +1,10 @@
 "use strict";
 
+import showdown from 'showdown';
+import readmeRaw from 'README.md';
+
+const mdConverter = new showdown.Converter();
+
 export default class mainController{
     constructor($state, $timeout){
         const self = this;
@@ -10,6 +15,7 @@ export default class mainController{
             {stateName: 'main.page1'},
             {stateName: 'main.page2'}
         ];
+        self.readmeHtml = mdConverter.makeHtml(readmeRaw);
 
         $state.isNavOn = true;
         $state.isLoading = false;
@@ -19,9 +25,6 @@ export default class mainController{
 
         // default hide nav for mobile devices
         if(window.matchMedia('(max-width: 767px)').matches) $state.isNavOn = false;
-
-        // go to default child view here
-        $state.go('main.page1');
 
         /**
          * In page alert

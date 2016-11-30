@@ -1,5 +1,7 @@
+"use strict";
 
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: "./src/public/js/app.js",
@@ -9,7 +11,7 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-        modulesDirectories: ['./src/public', 'node_modules'],
+        modulesDirectories: ['./src/public', 'node_modules', './'],
         alias: {
         }
     },
@@ -21,8 +23,9 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                loader: "babel-loader?presets[]=es2015"
+                loader: "babel-loader?presets[]=es2015,presets[]=react"
             },
+            { test: /\.md$/, loader: "raw" },
             { test: /\.css$/, loader: "style!css" }
         ]
     }

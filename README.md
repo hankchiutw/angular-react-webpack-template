@@ -1,5 +1,7 @@
 # angular-webpack-demo
-Simple SPA(single page application) using [angular.js 1.x](https://angularjs.org/) and [webpack](http://webpack.github.io/docs/).
+Simple SPA(single page application) using [angular.js 1.x](https://angularjs.org/), [ngReact](https://github.com/ngReact/ngReact) and [webpack](http://webpack.github.io/docs/).
+
+Source code [here](https://github.com/hankchiutw/angular-webpack-demo).
 
 ### Folder structure
 ```sh
@@ -24,6 +26,8 @@ Simple SPA(single page application) using [angular.js 1.x](https://angularjs.org
 - [angular-ui-router](https://github.com/angular-ui/ui-router)
 - Responsive(mobile devices ready)
 - babel-loader, i.e. ES6 syntax ready.
+- React JSX
+- [showdown](https://github.com/showdownjs/showdown) markdown parser.
 - Uglified and minimized bundle.js
 
 ### Pre-install
