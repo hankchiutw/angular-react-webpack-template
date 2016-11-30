@@ -3,6 +3,7 @@
 import angular from 'angular';
 import 'angular-local-storage';
 import 'angular-ui-router';
+import 'angular-sanitize';
 import 'ngreact';
 
 import run from 'js/config/run';
@@ -26,6 +27,7 @@ angular.element().ready(function(){
  * @module mainModule
  */
 export default angular.module( "app", [
+    "ngSanitize",
     "react",
     "LocalStorageModule",
     "ui.router"

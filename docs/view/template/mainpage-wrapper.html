@@ -44,5 +44,5 @@
 <!-- page content -->
 <div class='content-wrapper' ng-class='{"nav-on": $state.isNavOn}'>
     <h2 ng-bind='$state.current.label'></h2>
-    <div class='content-ui-view' ui-view>Hello!</div>
+    <div class='content-ui-view' ui-view><span ng-bind-html='mainController.readmeHtml'></span></div>
 </div>

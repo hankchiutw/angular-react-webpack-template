@@ -1,5 +1,10 @@
 "use strict";
 
+import showdown from 'showdown';
+import readmeRaw from 'README.md';
+
+const mdConverter = new showdown.Converter();
+
 export default class mainController{
     constructor($state, $timeout){
         const self = this;
@@ -10,6 +15,7 @@ export default class mainController{
             {stateName: 'main.page1'},
             {stateName: 'main.page2'}
         ];
+        self.readmeHtml = mdConverter.makeHtml(readmeRaw);
 
         $state.isNavOn = true;
         $state.isLoading = false;
