@@ -1,7 +1,7 @@
 {
-  "name": "angular-webpack-demo",
+  "name": "angular-react-webpack-template",
   "version": "1.1.0",
-  "description": "Simple SPA using angular.js, webpack and react",
+  "description": "Simple SPA using angularjs, react and webpack",
   "main": "src/public/js/main.js",
   "config": {},
   "scripts": {

@@ -1,4 +1,4 @@
-# angular-webpack-demo
+# angular-react-webpack-template
 Simple SPA(single page application) using [angular.js 1.x](https://angularjs.org/), [ngReact](https://github.com/ngReact/ngReact) and [webpack](http://webpack.github.io/docs/).
 
 Source code [here](https://github.com/hankchiutw/angular-webpack-demo).
