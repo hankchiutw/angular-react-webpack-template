@@ -8,6 +8,7 @@ import 'ngreact';
 
 import run from 'js/config/run';
 import { routes, html5Mode } from 'js/config/route';
+import factory1 from 'js/factory/factory1';
 import mainController from 'js/controller/main';
 import page1Controller from 'js/controller/page1';
 import page2Controller from 'js/controller/page2';
@@ -35,6 +36,7 @@ export default angular.module( "app", [
 .run(run)
 .config(routes)
 .config(html5Mode)
+.factory('factory1', factory1)
 .controller('mainController', mainController)
 .controller('page1Controller', page1Controller)
 .controller('page2Controller', page2Controller)
