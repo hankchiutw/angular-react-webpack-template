@@ -13,7 +13,8 @@ export default class mainController{
         self.isUserMenuOn = false;
         self.navItems = [
             {stateName: 'main.page1'},
-            {stateName: 'main.page2'}
+            {stateName: 'main.page2'},
+            {stateName: 'main.page3'}
         ];
         self.readmeHtml = mdConverter.makeHtml(readmeRaw);
 

@@ -28,6 +28,8 @@ Source code [here](https://github.com/hankchiutw/angular-webpack-demo).
 - babel-loader, i.e. ES6 syntax ready.
 - React JSX
 - [showdown](https://github.com/showdownjs/showdown) markdown parser.
+- Skeleton factory, service and react component
+- Messaging system
 - Uglified and minimized bundle.js
 
 ### Pre-install

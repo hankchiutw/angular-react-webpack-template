@@ -13,6 +13,7 @@ import service1 from 'js/service/service1';
 import mainController from 'js/controller/main';
 import page1Controller from 'js/controller/page1';
 import page2Controller from 'js/controller/page2';
+import page3Controller from 'js/controller/page3';
 
 import 'react';
 import component1 from 'js/component/component1';
@@ -42,4 +43,5 @@ export default angular.module( "app", [
 .controller('mainController', mainController)
 .controller('page1Controller', page1Controller)
 .controller('page2Controller', page2Controller)
+.controller('page3Controller', page3Controller)
 .value('component1', component1);
