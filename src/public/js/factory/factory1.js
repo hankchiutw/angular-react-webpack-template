@@ -4,7 +4,7 @@ export default function factory1(){
 
     return {
         sayMessage: function(message){
-            return 'Hi, '+ message;
+            return 'From factory1: '+ message;
         }
     };
 }
