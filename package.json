@@ -6,8 +6,8 @@
   "config": {},
   "scripts": {
     "start": "webpack-dev-server --progress --color --content-base docs/ --open --inline",
-    "build": "webpack --progress --color",
-    "build:detail": "webpack --display-error-details --display-reasons --display-modules"
+    "build": "NODE_ENV=prod webpack --progress --color",
+    "build:detail": "NODE_ENV=prod webpack --display-error-details --display-reasons --display-modules"
   },
   "keywords": [
     "angular",
