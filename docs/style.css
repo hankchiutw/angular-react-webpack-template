@@ -1,0 +1,239 @@
+ 
+html, body {
+    height: 100%;
+    background-color: #f6fffe;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.fa{
+    cursor: pointer;
+}
+.dropdown-toggle{
+    cursor: pointer;
+}
+
+.browser-unsupport{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 999;
+}
+
+.browser-caution{
+    position: fixed;
+    top: 0;
+    background-color: lightGoldenrodYellow;
+    color: crimson;
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+}
+
+/** notification */
+.loading-wrapper,
+.message-wrapper{
+    position: fixed;
+    top: -50px;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0px;
+    z-index: 9999;
+    opacity: 0;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.loading-wrapper{
+    background-color: rgba(255, 255, 255, 0);
+}
+.loading-wrapper img{
+    height: 100%;
+    animation:spin 1s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.message-wrapper{
+    color: crimson;
+}
+
+.message-wrapper .center{
+    background-color: rgba(255, 240, 140, 0.7);
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.loading-wrapper.on,
+.message-wrapper.on{
+    top: 6px;
+    opacity: 1;
+}
+
+/** header wrapper */
+.header-wrapper{
+    height: 50px;
+    background-color: #078a7f;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.header-wrapper .cell{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.header-wrapper .logo img{
+    height: 100%;
+    padding: 6px 0;
+}
+
+.header-wrapper .user-menu-cell{
+    padding: 0;
+}
+
+.header-wrapper .user-menu-cell .dropdown-toggle{
+    color: white;
+    background: none;
+    height: 50px;
+    font-size: 18px;
+}
+
+.header-wrapper .user-menu-cell .dropdown-menu.on{
+    display: block;
+}
+
+
+/** left nav */
+.nav-wrapper{
+    width: 200px;
+    height: 100%;
+    background-color: #01ab9d;
+    color: white;
+    font-size: 20px;
+    padding-top: 70px;
+    transition: left 0.3s ease-out;
+    z-index: 50;
+    margin-right: 30px;
+    position: fixed;
+    left: 0;
+}
+
+.nav-wrapper.off{
+    left: -200px;
+}
+
+
+.nav-wrapper .item.on{
+    background-color: #0a9488;
+}
+
+.nav-wrapper .item a{
+    color: white;
+    margin-left: 40px;
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+}
+
+.nav-wrapper .item{
+    margin: 0;
+}
+
+@media (max-width: 767px){
+    .nav-wrapper{
+        position: fixed;
+        left: 0;
+        border-right: solid 1px #ccc;
+    }
+
+    .nav-wrapper.off{
+        left: -200px;
+    }
+
+    .content-mask{
+        background-color: black;
+        opacity: 0;
+        transition: left 0.5s cubic-bezier(1,0,1,0),opacity 0.3s ease-out;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: -100%;
+        z-index: 10;
+    }
+
+    .content-mask.on{
+        transition: opacity 0.3s ease-out;
+        opacity: 0.3;
+        left: 0;
+    }
+}
+
+/** content-wrapper */
+.content-wrapper {
+    height: 100%;
+    padding: 50px 30px 0;
+    margin-left: 0px;
+    transition: margin-left 0.5s ease-out;
+}
+
+.content-wrapper.nav-on {
+    margin-left: 200px;
+}
+
+.content-wrapper h2{
+    color: #555;
+}
+
+.content-ui-view {
+}
+
+.content-wrapper .btn.normal{
+    width: 100%;
+    background-color: #00a1ff;
+    color: white;
+    height: 50px;
+    font-size: 20px;
+}
+
+.content-wrapper .input.normal{
+    width: 100%;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: #aaa;
+    color: #555;
+    background: none;
+    padding: 0 16px;
+    height: 50px;
+    font-size: 20px;
+}
+
+@media (max-width: 767px){
+    .content-wrapper.nav-on {
+        margin-left: 0px;
+    }
+
+    .content-wrapper .btn.normal{
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .content-wrapper .input.normal{
+        padding: 0 8px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+

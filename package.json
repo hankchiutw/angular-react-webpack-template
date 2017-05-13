@@ -1,8 +1,8 @@
 {
   "name": "angular-react-webpack-template",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Simple SPA using angularjs, react and webpack",
-  "main": "src/public/js/main.js",
+  "main": "docs/app.js",
   "config": {},
   "scripts": {
     "start": "webpack-dev-server --progress --color --content-base docs/ --open --inline",
@@ -12,7 +12,7 @@
   "keywords": [
     "angular",
     "react",
-    "webpack"
+    "webpack2"
   ],
   "author": "Hank",
   "license": "ISC",
@@ -32,8 +32,10 @@
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.18.0",
     "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^2.1.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

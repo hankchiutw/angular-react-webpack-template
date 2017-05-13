@@ -1,5 +1,7 @@
 "use strict";
 
+import 'style/main.css';
+
 import angular from 'angular';
 import 'angular-local-storage';
 import 'angular-ui-router';
