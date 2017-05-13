@@ -2,7 +2,6 @@
 
 import 'style/main.css';
 
-import angular from 'angular';
 import 'angular-local-storage';
 import 'angular-ui-router';
 import 'angular-sanitize';
@@ -17,7 +16,6 @@ import page1Controller from 'js/controller/page1';
 import page2Controller from 'js/controller/page2';
 import page3Controller from 'js/controller/page3';
 
-import 'react';
 import component1 from 'js/component/component1';
 
 // DOM init

@@ -42,6 +42,12 @@ let config = {
           fallback: "style-loader",
           use: "css-loader"
         })
+      },
+      {
+        test: require.resolve('angular'),
+        use: {
+          loader: 'exports-loader?window.angular',
+        }
       }
     ]
   },
@@ -49,6 +55,10 @@ let config = {
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendors",
       filename: "vendors.js"
+    }),
+    new webpack.ProvidePlugin({
+      angular: 'angular',
+      React: 'react'
     }),
     new ExtractTextPlugin({
       filename: 'style.css',
